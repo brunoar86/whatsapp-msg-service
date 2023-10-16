@@ -1,0 +1,5 @@
+{
+    "SECRET_KEY": "you-will-never-guess",
+    "PHONE_NUMBER_ID": "default-phone-id",
+    "BEARER_TOKEN": "default-bearer-token"
+}

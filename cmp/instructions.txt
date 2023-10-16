@@ -1,0 +1,66 @@
+Instruções para Uso da Aplicação de Envio de Mensagens de WhatsApp
+
+Olá,
+
+A seguir estão as instruções detalhadas para instalar e usar nossa aplicação de envio de mensagens de WhatsApp em um sistema Windows.
+
+Requisitos
+
+    Python 3.x instalado
+    Acesso à Internet
+
+-------------------------------------------------------------------------------
+
+Instalação
+
+    Extraia o arquivo .zip que você recebeu em um diretório de sua escolha.
+    Abra o Prompt de Comando (cmd) como administrador e navegue até o diretório onde você extraiu os arquivos.
+    Instale as dependências executando o seguinte comando:
+
+    pip install -r requirements.txt
+
+-------------------------------------------------------------------------------
+
+Configuração
+
+    Você encontrará um arquivo chamado config.json na pasta extraída. Abra-o com um editor de texto, como o Bloco de Notas.
+    Atualize os seguintes campos:
+        SECRET_KEY: Sua chave secreta para o aplicativo.
+        PHONE_NUMBER_ID: O identificador do número de telefone do WhatsApp.
+        BEARER_TOKEN: O token de autorização.
+
+-------------------------------------------------------------------------------
+
+Execução
+
+    Volte para o Prompt de Comando.
+
+    Execute o seguinte comando para iniciar o aplicativo:
+
+    css
+
+    python main.py
+
+    Abra um navegador web e acesse http://127.0.0.1:5000/ para utilizar a interface do aplicativo.
+
+-------------------------------------------------------------------------------
+
+Uso
+
+    Na interface web, você encontrará campos para:
+        Mensagem: O texto que você deseja enviar.
+        Secret Key: A chave secreta (deve coincidir com a definida no config.json).
+        Phone Number ID: O identificador do número de telefone (deve coincidir com o definido no config.json).
+        Bearer Token: O token de autorização (deve coincidir com o definido no config.json).
+        Nome do arquivo xlsx: Nome do arquivo Excel que contém os números de telefone.
+
+    Preencha esses campos e clique em "Enviar Mensagens".
+
+-------------------------------------------------------------------------------
+
+Solução de Problemas (Troubleshooting)
+
+    Certifique-se de que o arquivo Excel contém uma coluna chamada 'Contact' com os números de telefone.
+    Verifique se a porta 5000 está disponível em seu sistema. Se não estiver, você terá que alterar a porta no arquivo main.py.
+
+-------------------------------------------------------------------------------
